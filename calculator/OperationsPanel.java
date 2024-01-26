@@ -1,6 +1,7 @@
 package calculator;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,26 +28,50 @@ public class OperationsPanel extends JPanel implements ActionListener {
 
         btnAdd = new JButton("+");
         btnAdd.addActionListener(this);
+        btnAdd.setContentAreaFilled(false);
+        btnAdd.setOpaque(true);
+        btnAdd.setBackground(Color.GRAY);
+        btnAdd.setBorder(new LineBorder(Color.BLACK, 1));
         add(btnAdd);
 
         btnSub = new JButton("-");
         btnSub.addActionListener(this);
+        btnSub.setContentAreaFilled(false);
+        btnSub.setOpaque(true);
+        btnSub.setBackground(Color.GRAY);
+        btnSub.setBorder(new LineBorder(Color.BLACK, 1));
         add(btnSub);
 
         btnMult = new JButton("*");
         btnMult.addActionListener(this);
+        btnMult.setContentAreaFilled(false);
+        btnMult.setOpaque(true);
+        btnMult.setBackground(Color.GRAY);
+        btnMult.setBorder(new LineBorder(Color.BLACK, 1));
         add(btnMult);
 
         btnDiv = new JButton("/");
         btnDiv.addActionListener(this);
+        btnDiv.setContentAreaFilled(false);
+        btnDiv.setOpaque(true);
+        btnDiv.setBackground(Color.GRAY);
+        btnDiv.setBorder(new LineBorder(Color.BLACK, 1));
         add(btnDiv);
 
         btnEq = new JButton("=");
         btnEq.addActionListener(this);
+        btnEq.setContentAreaFilled(false);
+        btnEq.setOpaque(true);
+        btnEq.setBackground(Color.GRAY);
+        btnEq.setBorder(new LineBorder(Color.BLACK, 1));
         add(btnEq);
 
         btnClear = new JButton("C");
         btnClear.addActionListener(this);
+        btnClear.setContentAreaFilled(false);
+        btnClear.setOpaque(true);
+        btnClear.setBackground(Color.GRAY);
+        btnClear.setBorder(new LineBorder(Color.BLACK, 1));
         add(btnClear);
     }
 

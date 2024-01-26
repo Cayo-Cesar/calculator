@@ -13,6 +13,8 @@ public class TextPanel extends JPanel {
         txtNumber = new JTextField(40);
         txtNumber.setHorizontalAlignment(JTextField.RIGHT);
         txtNumber.setEditable(false);
+        txtNumber.setBackground(Color.GRAY);
+        txtNumber.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
         add(txtNumber);
     }
 

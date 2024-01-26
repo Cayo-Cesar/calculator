@@ -13,8 +13,10 @@ public class calc extends JFrame {
         UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(350, 350);
+        setSize(450, 350);
         setLocation(400, 200);
+        setResizable(false);
+        setBackground(Color.GRAY);
 
         setLayout(new BorderLayout());
 
