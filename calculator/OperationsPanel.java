@@ -7,7 +7,11 @@ import java.awt.event.ActionListener;
 
 public class OperationsPanel extends JPanel implements ActionListener {
 
-    private JTextField textText;
+    private JTextField txtText;
+
+    private char op;
+    private double num1;
+    private double num2;
 
     private JButton btnAdd;
     private JButton btnSub;
@@ -16,8 +20,8 @@ public class OperationsPanel extends JPanel implements ActionListener {
     private JButton btnEq;
     private JButton btnClear;
 
-    public OperationsPanel(JTextField txtNumber) {
-        this.textText = textText;
+    public OperationsPanel(JTextField txtText) {
+        this.txtText = txtText;
 
         setLayout(new GridLayout(3, 2));
 
@@ -48,6 +52,32 @@ public class OperationsPanel extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-aa
+      if (txtText.getText().isEmpty()) {
+           return;
+        }
+      JButton btn = (JButton) e.getSource();
+
+      if (btn == btnClear) {
+          op = '\u0000';
+          txtText.setText("");
+      } else if (btn == btnEq) {
+            num2 = Double.parseDouble(txtText.getText());
+            double result = switch (op) {
+                case '+' -> num1 + num2;
+                case '-' -> num1 - num2;
+                case '*' -> num1 * num2;
+                case '/' -> num1 / num2;
+                default -> 0;
+            };
+          txtText.setText(String.valueOf(result));
+            op = '\u0000';
+            num1 = result;
+            num2 = 0;
+
+        } else {
+            op = btn.getText().charAt(0);
+            num1 = Double.parseDouble(txtText.getText());
+            txtText.setText("");
+      }
     }
 }
